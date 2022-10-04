@@ -1,0 +1,13 @@
+.calc {
+    display: flex;
+    width: 600pxs;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    border-style: solid 1px;
+
+}
