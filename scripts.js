@@ -1,3 +1,4 @@
+const mainDisplay = document.getElementById('display');
 let btn1 = document.getElementById('1');
 let btn2 = document.getElementById('2');
 let btn3 = document.getElementById('3');
@@ -18,6 +19,7 @@ function getResult() {
     console.log("btn1+btn2: ", (result)
 
     );
+    mainDisplay.value = result;
 }
 //add numbers
 //subract numbers
