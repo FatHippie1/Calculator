@@ -3,9 +3,12 @@ let btn2 = document.getElementById('2');
 let btn3 = document.getElementById('3');
 const equal = document.getElementById('enter');
 let result = '';
-
-equal.addEventListener('click', getResult);
 debugger;
+
+//equal sign event listener
+equal.addEventListener('click', getResult);
+
+//display results
 function getResult() {
     let btn1a = parseFloat(btn1.defaultValue);
     let btn2a = parseFloat(btn2.defaultValue);
@@ -16,4 +19,8 @@ function getResult() {
 
     );
 }
+//add numbers
+//subract numbers
+//multiply numbers
+//divide numbers
 //getResult();
