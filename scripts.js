@@ -15,10 +15,9 @@ function getResult() {
     let btn2a = parseFloat(btn2.defaultValue);
     let btn3a = parseFloat(btn3.defaultValue);
     let result = (btn1a + btn2a + btn3a);
-    //console.log(e);
-    console.log("btn1+btn2: ", (result)
 
-    );
+    console.log("btn1+btn2: ", (result));
+
     mainDisplay.value = result;
 }
 //add numbers
