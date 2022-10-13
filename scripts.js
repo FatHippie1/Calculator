@@ -6,7 +6,11 @@ const equal = document.getElementById('enter');
 let result = '';
 debugger;
 
-//equal sign event listener
+//number event listeners
+btn2.addEventListener('click', getResult);
+btn3.addEventListener('click', getResult);
+
+//operator event listeners
 equal.addEventListener('click', getResult);
 
 //display results
@@ -21,6 +25,10 @@ function getResult() {
     mainDisplay.value = result;
 }
 //add numbers
+function addNumbers() {
+    btn1.addEventListener('click', addNumbers);
+    console.log('clicked')
+}
 //subract numbers
 //multiply numbers
 //divide numbers
