@@ -1,14 +1,15 @@
 const mainDisplay = document.getElementById('display');
-let btn1 = document.getElementById('1');
-let btn2 = document.getElementById('2');
-let btn3 = document.getElementById('3');
+let btn1 = document.getElementById('1').addEventListener('click', addNumbers);;
+let btn2 = document.getElementById('2').addEventListener('click', addNumbers);;
+let btn3 = document.getElementById('3').addEventListener('click', addNumbers);;
 const equal = document.getElementById('enter');
 let result = '';
-debugger;
+//debugger;
 
 //number event listeners
-btn2.addEventListener('click', getResult);
-btn3.addEventListener('click', getResult);
+//btn1.addEventListener('click', addNumbers);
+//btn2.addEventListener('click', addNumbers);
+//btn3.addEventListener('click', addNumbers);
 
 //operator event listeners
 equal.addEventListener('click', getResult);
@@ -26,8 +27,9 @@ function getResult() {
 }
 //add numbers
 function addNumbers() {
-    btn1.addEventListener('click', addNumbers);
-    console.log('clicked')
+    //if btn1
+    console.log('clicked');
+
 }
 //subract numbers
 //multiply numbers

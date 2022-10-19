@@ -1,10 +1,3 @@
-.calc {
-    display: flex;
-    width: 600pxs;
-    justify-content: space-around;
-    background-color: coral;
-}
-
 .display {
     width: 160px;
 
@@ -13,20 +6,21 @@
     background-color: lightgreen;
 }
 
-.btn {
-    width: 60px;
 
-    justify-content: center;
-    border-style: solid 1px;
+.btn {
+    color: aliceblue;
 }
 
 .btn-txt {
-
-    justify-self: center;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
 }
 
 #enter {
 
+    display: inline-flex;
+    justify-self: center;
     width: auto;
 
 }
