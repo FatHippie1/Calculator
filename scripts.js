@@ -1,10 +1,11 @@
-const mainDisplay = document.getElementById('display');
-let btn1 = document.getElementById('1').addEventListener('click', getFirst);;
-let btn2 = document.getElementById('2').addEventListener('click', getSecond);;
-let btn3 = document.getElementById('3').addEventListener('click', addNumbers);;
+let mainDisplay = document.getElementById('display2');
+let btn1 = document.getElementById('1').addEventListener('click', getFirst);
+let btn2 = document.getElementById('2').addEventListener('click', getSecond);
+let btn3 = document.getElementById('3').addEventListener('click', addNumbers);
+let btnClear = document.getElementById('c').addEventListener('click', clear);
 let firstNum = '';
 let secondNum = '';
-const equal = document.getElementById('enter');
+const equal = document.getElementById('=')
 let result = '';
 //debugger;
 
@@ -13,18 +14,26 @@ let result = '';
 //btn2.addEventListener('click', addNumbers);
 //btn3.addEventListener('click', addNumbers);
 function getFirst(e) {
-    let firstNum = e.target.value;
+    firstNum = parseFloat(e.target.value);
+    mainDisplay.value += firstNum;
+    return firstNum;
     console.log(firstNum);
 }
 function getSecond(e) {
-    let secondNum = e.target.value;
+    secondNum = parseFloat(e.target.value);
+    mainDisplay.value += secondNum;
+    return secondNum;
     console.log(secondNum);
 }
-function addNumbers(getFirst, getSecond) {
-    let result = getFirst + getSecond;
+function addNumbers() {
+    result = firstNum + secondNum;
+    mainDisplay.value += result
     console.log(result);
     // console.log('clicked', this.value);
 
+}
+function clear() {
+    mainDisplay.value = '';
 }
 //operator event listeners
 equal.addEventListener('click', addNumbers);
