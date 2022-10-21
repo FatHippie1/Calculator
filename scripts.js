@@ -10,31 +10,32 @@ let result = '';
 //debugger;
 
 //number event listeners
-//btn1.addEventListener('click', addNumbers);
-//btn2.addEventListener('click', addNumbers);
-//btn3.addEventListener('click', addNumbers);
+
+
 function getFirst(e) {
     firstNum = parseFloat(e.target.value);
     mainDisplay.value += firstNum;
     return firstNum;
     console.log(firstNum);
 }
+
 function getSecond(e) {
     secondNum = parseFloat(e.target.value);
     mainDisplay.value += secondNum;
     return secondNum;
     console.log(secondNum);
 }
+
 function addNumbers() {
     result = firstNum + secondNum;
     mainDisplay.value += result
     console.log(result);
-    // console.log('clicked', this.value);
-
 }
+
 function clear() {
     mainDisplay.value = '';
 }
+
 //operator event listeners
 equal.addEventListener('click', addNumbers);
 
