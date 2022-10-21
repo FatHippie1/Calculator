@@ -7,6 +7,16 @@ let firstNum = '';
 let secondNum = '';
 const equal = document.getElementById('=')
 let result = '';
+//IDEAS
+/*
+let firstOperand = 'null';
+let secondOperand = 'null';
+let operator = 'null';
+
+use a forEach maybe
+
+*/
+
 //debugger;
 
 //number event listeners
