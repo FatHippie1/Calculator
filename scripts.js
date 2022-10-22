@@ -14,7 +14,7 @@ let secondOperand = 'null';
 let operator = 'null';
 
 use a forEach maybe
-
+but how?
 */
 
 //debugger;
