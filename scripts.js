@@ -1,53 +1,66 @@
+
 let mainDisplay = document.getElementById('display2');
-let btn1 = document.getElementById('1').addEventListener('click', getFirst);
-let btn2 = document.getElementById('2').addEventListener('click', getSecond);
-let btn3 = document.getElementById('3').addEventListener('click', addNumbers);
-let btnClear = document.getElementById('c').addEventListener('click', clear);
+let btn1 = document.getElementById('1').addEventListener('click', numberPress);
+let btn2 = document.getElementById('2').addEventListener('click', numberPress);
+let btn3 = document.getElementById('3').addEventListener('click', numberPress);
+let btn4 = document.getElementById('4').addEventListener('click', numberPress);
+let btn5 = document.getElementById('5').addEventListener('click', numberPress);
+let btn6 = document.getElementById('6').addEventListener('click', numberPress);
+let btn7 = document.getElementById('7').addEventListener('click', numberPress);
+let btn8 = document.getElementById('8').addEventListener('click', numberPress);
+let btn9 = document.getElementById('9').addEventListener('click', numberPress);
+let btn0 = document.getElementById('0').addEventListener('click', numberPress);
+//let btnDec = document.getElementById('.').addEventListener('click', numberPress);
 let firstNum = '';
 let secondNum = '';
-const equal = document.getElementById('=')
+let operator = "";
 let result = '';
-//IDEAS
-/*
-let firstOperand = 'null';
-let secondOperand = 'null';
-let operator = 'null';
+let equal = document.getElementById('=').addEventListener('click', equalsPress);
+let btnClear = document.getElementById('c').addEventListener('click', clear);
 
-use a forEach maybe
-but how?
-*/
-
+document.getElementById("+").addEventListener("click", operatorPress);
+document.getElementById("-").addEventListener("click", operatorPress);
+document.getElementById("*").addEventListener("click", operatorPress);
+document.getElementById("/").addEventListener("click", operatorPress);
 //debugger;
 
-//number event listeners
+function numberPress(e) {
 
+    if (operator == "") {
+        firstNum = parseFloat(e.target.value);
+        mainDisplay.value += firstNum;
+        console.log(firstNum);
+    }
+    else {
+        secondNum = parseFloat(e.target.value);
+        mainDisplay.value += secondNum;
+        console.log(secondNum);
+    }
+}
+function operatorPress(e) {
+    operator = e.target.value;
+    mainDisplay.value += operator;
 
-function getFirst(e) {
-    firstNum = parseFloat(e.target.value);
-    mainDisplay.value += firstNum;
-    return firstNum;
-    console.log(firstNum);
+    //return operator;
+    console.log(operator);
 }
 
-function getSecond(e) {
-    secondNum = parseFloat(e.target.value);
-    mainDisplay.value += secondNum;
-    return secondNum;
-    console.log(secondNum);
-}
-
-function addNumbers() {
+function equalsPress(e) {
     result = firstNum + secondNum;
-    mainDisplay.value += result
-    console.log(result);
+    //mainDisplay.value += '=';
+    mainDisplay.value += ('=' + result);
+    console.log('=' + result);
 }
 
 function clear() {
     mainDisplay.value = '';
+    firstNum = '';
+    secondNum = '';
+    operator = '';
 }
 
 //operator event listeners
-equal.addEventListener('click', addNumbers);
+//equal.addEventListener('click', addNumbers);
 
 //display results
 function getResult() {

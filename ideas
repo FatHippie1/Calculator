@@ -1,0 +1,46 @@
+let firstNum = ""; // "2" or 2
+let secondNum = ""; // "3" or 3
+let operator = ""; // "+"
+let result = "";
+
+let mainDisplay = document.getElementById("display2");
+
+let btn2 = document.getElementById("2").addEventListener("click", numberPress);
+let btn3 = document.getElementById("3").addEventListener("click", numberPress);
+
+document.getElementById("=").addEventListener("click", equalsPress);
+
+document.getElementById("+").addEventListener("click", operatorPress);
+
+// TEST CASE: 2 + 3 = 5
+
+// STEP 1: Press 2
+// EXPECT: 2 displays on the screen
+// ACTUAL: IT WORKS!
+
+// STEP 2: Press +
+// EXPECT: 2 displays on the screen
+// ACTUAL: IT WORKS!
+
+// STEP 3: Press 3
+// EXPECT: 3 displays on the screen
+// ACTUAL: 22 displays on the screen
+
+// STEP 4: Press =
+// EXPECT: 5 display on the screen
+// ACTUAL: 222 displays on the screen
+
+function numberPress(e) {
+    console.log("number button was pressed");
+}
+
+function operatorPress(e) {
+    console.log("operator button was pressed");
+}
+
+function equalsPress(e) {
+    console.log("equals button was pressed");
+    console.log("firstNum: ", firstNum);
+    console.log("secondNum: ", secondNum);
+    console.log("operator: ", operator);
+}
