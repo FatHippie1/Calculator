@@ -26,6 +26,7 @@ document.getElementById("/").addEventListener("click", operatorPress);
 
 function numberPress(e) {
 
+    clear();
     if (operator == "") {
         firstNum = parseFloat(e.target.value);
         mainDisplay.value += firstNum;
@@ -40,42 +41,37 @@ function numberPress(e) {
 function operatorPress(e) {
     operator = e.target.value;
     mainDisplay.value += operator;
-
-    //return operator;
     console.log(operator);
 }
 
 function equalsPress(e) {
-    result = firstNum + secondNum;
-    //mainDisplay.value += '=';
-    mainDisplay.value += ('=' + result);
-    console.log('=' + result);
+    //use switch case
+    switch (operator) {
+        case '+':
+            result = firstNum + secondNum;
+            break;
+        case '-':
+            result = firstNum - secondNum;
+            break;
+        case '*':
+            result = firstNum * secondNum;
+            break;
+        case '/':
+            result = firstNum / secondNum;
+            break;
+    }
+
+    clear();
+    mainDisplay.value += (result);
+    console.log(result);
 }
 
 function clear() {
     mainDisplay.value = '';
-    firstNum = '';
-    secondNum = '';
-    operator = '';
+    //firstNum = '';
+    //secondNum = '';
+    //operator = '';
 }
 
 //operator event listeners
 //equal.addEventListener('click', addNumbers);
-
-//display results
-function getResult() {
-    let btn1a = parseFloat(btn1.defaultValue);
-    let btn2a = parseFloat(btn2.defaultValue);
-    let btn3a = parseFloat(btn3.defaultValue);
-    let result = (btn1a + btn2a + btn3a);
-
-    console.log("btn1+btn2: ", (result));
-
-    mainDisplay.value = result;
-}
-//add numbers
-//addNumbers();
-//subract numbers
-//multiply numbers
-//divide numbers
-//getResult();
