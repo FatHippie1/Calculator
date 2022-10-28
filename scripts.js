@@ -13,7 +13,7 @@ let btn0 = document.getElementById('0').addEventListener('click', numberPress);
 //let btnDec = document.getElementById('.').addEventListener('click', numberPress);
 let firstNum = '';
 let secondNum = '';
-let operator = "";
+let operator = '';
 let result = '';
 let equal = document.getElementById('=').addEventListener('click', equalsPress);
 let btnClear = document.getElementById('c').addEventListener('click', clear);
@@ -22,7 +22,7 @@ document.getElementById("+").addEventListener("click", operatorPress);
 document.getElementById("-").addEventListener("click", operatorPress);
 document.getElementById("*").addEventListener("click", operatorPress);
 document.getElementById("/").addEventListener("click", operatorPress);
-//debugger;
+debugger;
 
 function numberPress(e) {
 
