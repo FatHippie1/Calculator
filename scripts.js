@@ -10,7 +10,7 @@ let btn7 = document.getElementById('7').addEventListener('click', numberPress);
 let btn8 = document.getElementById('8').addEventListener('click', numberPress);
 let btn9 = document.getElementById('9').addEventListener('click', numberPress);
 let btn0 = document.getElementById('0').addEventListener('click', numberPress);
-//let btnDec = document.getElementById('.').addEventListener('click', numberPress);
+let btnDec = document.getElementById('.').addEventListener('click', numberPress);
 let firstNum = '';
 let secondNum = '';
 let operator = '';
@@ -28,7 +28,7 @@ function numberPress(e) {
 
     clear();
     if (operator == "") {
-        firstNum += parseFloat(e.target.value);
+        firstNum += e.target.value;
         mainDisplay.value += firstNum;
         console.log("firstNum:  ", firstNum);
         //firstNum = '';
@@ -36,7 +36,7 @@ function numberPress(e) {
         //operator = '';
     }
     else {
-        secondNum += parseFloat(e.target.value);
+        secondNum += e.target.value;
         mainDisplay.value += secondNum;
         console.log("secondNum:  ", secondNum);
         //firstNum = '';
