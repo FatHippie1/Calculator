@@ -22,42 +22,60 @@ document.getElementById("+").addEventListener("click", operatorPress);
 document.getElementById("-").addEventListener("click", operatorPress);
 document.getElementById("*").addEventListener("click", operatorPress);
 document.getElementById("/").addEventListener("click", operatorPress);
-debugger;
+//debugger;
 
 function numberPress(e) {
 
     clear();
     if (operator == "") {
-        firstNum = parseFloat(e.target.value);
+        firstNum += parseFloat(e.target.value);
         mainDisplay.value += firstNum;
-        console.log(firstNum);
+        console.log("firstNum:  ", firstNum);
+        //firstNum = '';
+        //secondNum = '';
+        //operator = '';
     }
     else {
-        secondNum = parseFloat(e.target.value);
+        secondNum += parseFloat(e.target.value);
         mainDisplay.value += secondNum;
-        console.log(secondNum);
+        console.log("secondNum:  ", secondNum);
+        //firstNum = '';
+        //secondNum = '';
+        //operator = '';
     }
 }
 function operatorPress(e) {
     operator = e.target.value;
     mainDisplay.value += operator;
-    console.log(operator);
+    console.log("operator:  ", operator);
 }
 
 function equalsPress(e) {
     //use switch case
     switch (operator) {
         case '+':
-            result = firstNum + secondNum;
+            result = parseFloat(firstNum) + parseFloat(secondNum);
+            firstNum = '';
+            secondNum = '';
+            operator = '';
             break;
         case '-':
-            result = firstNum - secondNum;
+            result = parseFloat(firstNum) - parseFloat(secondNum);
+            firstNum = '';
+            secondNum = '';
+            operator = '';
             break;
         case '*':
-            result = firstNum * secondNum;
+            result = parseFloat(firstNum) * parseFloat(secondNum);
+            firstNum = '';
+            secondNum = '';
+            operator = '';
             break;
         case '/':
-            result = firstNum / secondNum;
+            result = parseFloat(firstNum) / parseFloat(secondNum);
+            firstNum = '';
+            secondNum = '';
+            operator = '';
             break;
     }
 
