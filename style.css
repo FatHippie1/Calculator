@@ -1,12 +1,3 @@
-.display {
-    width: 160px;
-
-    justify-content: center;
-    border-style: solid 20px;
-    background-color: lightgreen;
-}
-
-
 .btn {
     color: aliceblue;
 }
@@ -15,6 +6,24 @@
     text-align: center;
     display: inline-block;
     justify-content: center;
+}
+
+#display1 {
+    width: 160px;
+
+    justify-content: center;
+    border-style: solid 20px;
+    border-bottom: none;
+    background-color: lightgreen;
+}
+
+#display2 {
+    width: 160px;
+
+    justify-content: center;
+    border-style: solid 20px;
+    border-top: none;
+    background-color: lightgreen;
 }
 
 #enter {
